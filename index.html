@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowchart Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Flowchart Studio</h1>
+      <p>Turn your ideas into clear steps.</p>
+    </div>
+    <span class="status">Local workspace</span>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <h2>Shapes</h2>
+      <p class="hint">Choose a shape to add it to your canvas.</p>
+
+      <button class="shape-button" data-shape="start">
+        <span class="shape-icon start-icon">Start</span>
+        <span>Start / End</span>
+      </button>
+
+      <button class="shape-button" data-shape="process">
+        <span class="shape-icon process-icon">Step</span>
+        <span>Process</span>
+      </button>
+
+      <button class="shape-button" data-shape="decision">
+        <span class="shape-icon decision-icon"><span>?</span></span>
+        <span>Decision</span>
+      </button>
+
+      <div class="sidebar-divider"></div>
+
+      <button id="connect-button" class="action-button">
+  Connect two shapes
+</button>
+
+<button id="delete-connection-button" class="action-button" disabled>
+  Delete selected arrow
+</button>
+
+<button id="clear-button" class="clear-button">
+  Clear canvas
+</button>
+
+<p id="connection-status" class="hint" aria-live="polite">
+  Choose Connect, then select two shapes.
+</p>
+
+      <p class="hint">Tip: Double-click a shape to rename it.</p>
+    </aside>
+
+    <section class="workspace">
+      <div class="canvas-heading">
+        <div>
+          <h2>Your canvas</h2>
+          <p id="shape-count">0 shapes</p>
+        </div>
+        <span class="canvas-label">Untitled flowchart</span>
+      </div>
+
+      <div id="canvas" class="canvas" aria-label="Flowchart canvas">
+        <div id="empty-state" class="empty-state">
+          <div class="empty-symbol">＋</div>
+          <h3>Your flowchart starts here</h3>
+          <p>Add a shape from the left to get started.</p>
+        </div>
+      </div>
+
+      <footer class="workspace-footer">
+        <span>Drag shapes to move them.</span>
+        <span>Changes are not saved yet.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Helpful if you open the file without a developer console.
+    // The main app code is loaded from script.js.
+  </script>
+</body>
+</html>
